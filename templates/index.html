@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+ {% for m in get_flashed_messages() %}
+<script>
+alert("{{m}}")
+</script>
+{% endfor %}
+ <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">🏏 IPL Score Predictor</div>
+        <ul>
+            <li><a href="{{ url_for('index') }}" class="active">Home</a></li>
+        
+           <li><a href="#teams">Teams</a></li>
+           <li><a href="#about">About</a></li>
+           <li><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
+
+
+     <div class="hero">
+        <div class="hero-content">
+            <h1 style="color: white;">🏏 IPL Score Prediction</h1>
+            <p style="font-weight: bolder;">Predict the Final Score of IPL Match</p>
+           
+
+           <a href="{{ url_for('predict') }}" class="btn">Start Prediction</a>
+
+        </div>
+    </div>
+
+    <!-- ================= TEAMS SECTION ================= -->
+
+<section id="teams" class="teams-section">
+
+    <h2 class="teams-title">🏏 Teams Available</h2>
+
+    <div class="teams-banner">
+        <img src="./static/images/Image 3.png" alt="IPL Teams Banner">
+    </div>
+
+    <div class="teams-list">
+        <p>Kolkata Knight Riders</p>
+        <p>Chennai Super Kings</p>
+        <p>Rajasthan Royals</p>
+        <p>Mumbai Indians</p>
+        <p>Kings XI Punjab</p>
+        <p>Royal Challengers Bangalore</p>
+        <p>Delhi Daredevils</p>
+        <p>Sunrisers Hyderabad</p>
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT SECTION ================= -->
+
+<section id="about" class="about-section">
+
+    <div class="about-container">
+
+        <h2>📊 About This Model</h2>
+
+        <p class="about-description">
+            This IPL Score Prediction model uses machine learning techniques to estimate
+            the final score of a team based on match conditions such as overs completed,
+            wickets fallen, current run rate, batting team, bowling team, and venue.
+        </p>
+
+        <div class="about-features">
+            <div class="feature-card">
+                <h3>⚡ Smart Prediction</h3>
+                <p>Uses trained regression algorithms to calculate accurate score estimates.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>📈 Real-Time Inputs</h3>
+                <p>Takes live match data such as runs, overs, wickets, and teams.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🎯 Data Driven</h3>
+                <p>Model trained on historical IPL match datasets for better performance.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-content">
+        <h3>🏏 IPL Score Predictor</h3>
+        <p>Machine Learning Based IPL Final Score Prediction System</p>
+        <p>© 2026 All Rights Reserved</p>
+    </div>
+
+</footer>
+
+</body>
+</html>
+
+
+
+
+<!-- code .   -->

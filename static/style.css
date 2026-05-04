@@ -1,0 +1,458 @@
+/* Reset */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+}
+
+/* ================= NAVBAR ================= */
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    width: 100%;
+    padding: 18px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffcc00;
+    cursor: pointer;
+}
+
+/* Menu List */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+/* Links */
+.navbar ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #e2e8f0;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+/* Smooth underline animation */
+.navbar ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: #ffcc00;
+    transition: width 0.3s ease;
+}
+
+/* Hover effect */
+.navbar ul li a:hover {
+    color: #ffcc00;
+    transform: translateY(-2px);
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+
+/* ================= HERO SECTION ================= */
+
+.hero {
+    height: 1000px;
+    width: 2030px;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background: url("images/image\(2\).webp") no-repeat center center/cover;
+}
+
+
+
+
+/* ================= CONTENT ================= */
+
+/* ================= HERO CONTENT ================= */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    padding: 20px 30px;   /* Just spacing, no effects */
+    text-align: center;
+}
+/* Title */
+.hero-content h1 {
+    font-size: 70px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1.2;
+
+    margin-bottom: 25px;   /* More spacing */
+
+    
+    text-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Subtitle */
+.hero-content p {
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+
+    margin-bottom: 50px;   /* Professional spacing before button */
+
+    color: #f1f5f9;
+}
+
+/* ================= BUTTON ================= */
+
+.btn {
+    display: inline-block;
+    padding: 18px 45px;
+    background: linear-gradient(45deg, #ff512f, #dd2476);
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(255, 81, 47, 0.8);
+}
+
+/* ================= TEAMS SECTION ================= */
+
+.teams-section {
+    padding: 120px 80px;
+    background: #0f172a;
+    text-align: center;
+}
+
+.teams-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #ffcc00;
+    letter-spacing: 1px;
+}
+
+/* Banner Image */
+.teams-banner img {
+    width: 100%;
+    max-width: 1100px;
+    border-radius: 20px;
+    margin-bottom: 60px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+/* Team Names Grid */
+.teams-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.teams-list p {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.teams-list p:hover {
+    background: #ffcc00;
+    color: black;
+    transform: translateY(-5px);
+}
+
+
+/* ================= ABOUT SECTION ================= */
+
+.about-section {
+    padding: 120px 80px;
+    background: linear-gradient(to right, #0f172a, #1e293b);
+    text-align: center;
+}
+
+.about-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.about-section h2 {
+    font-size: 40px;
+    color: #ffcc00;
+    margin-bottom: 30px;
+}
+
+.about-description {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #e2e8f0;
+    margin-bottom: 60px;
+}
+
+/* Feature Cards */
+
+.about-features {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: rgba(255,255,255,0.05);
+    padding: 30px;
+    border-radius: 15px;
+    width: 300px;
+    transition: 0.3s ease;
+}
+
+.feature-card h3 {
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    font-size: 15px;
+    color: #cbd5e1;
+}
+
+.feature-card:hover {
+    background: #ffcc00;
+    color: black;
+    transform: translateY(-8px);
+}
+
+.feature-card:hover h3,
+.feature-card:hover p {
+    color: black;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background: #020617;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-content h3 {
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    color: #94a3b8;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+
+
+/* ================= PREDICT SECTION ================= */
+
+.predict-section {
+    min-height: 100vh;
+    background: linear-gradient(to right, #0f172a, #1e293b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 20px;
+}
+
+.predict-card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    padding: 50px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+.predict-card h2 {
+    text-align: center;
+    color: #ffcc00;
+    margin-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #e2e8f0;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.predict-btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background: #ffcc00;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.predict-btn:hover {
+    background: #ffd633;
+    transform: translateY(-3px);
+}
+
+.prediction-result {
+    margin-top: 40px;
+    text-align: center;
+    background: rgba(255,255,255,0.07);
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.prediction-result h3 {
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
+
+.prediction-result p {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Back to Home */
+
+.back-home {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.back-home a {
+    text-decoration: none;
+    color: #ffcc00;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.back-home a:hover {
+    color: white;
+}
+
+
+/* ===== Fix Select2 Alignment ===== */
+
+.select2-container--default .select2-selection--single {
+    height: 48px !important;
+    border-radius: 8px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+}
+
+.select2-selection__rendered {
+    line-height: normal !important;
+}
+
+.select2-container {
+    width: 100% !important;
+}
+
+/* ================= SELECT2 FIX ================= */
+
+.select2-container--default .select2-selection--single {
+    height: 45px;
+    border-radius: 8px;
+    border: none;
+    padding: 8px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: black;
+    line-height: 28px;
+    font-weight: 500;
+}
+
+.select2-dropdown {
+    background-color: white;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.select2-results__option {
+    padding: 10px;
+    font-size: 14px;
+    color: black;
+}
+
+.select2-results__option--highlighted {
+    background-color: #ffcc00 !important;
+    color: black !important;
+}
+
+.select2-search__field {
+    padding: 8px;
+    border-radius: 6px;
+}

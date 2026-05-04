@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IPL Score Prediction</title>
+       <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+
+
+    <!-- Select2 CSS for searchable dropdown -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">🏏 IPL Score Predictor</div>
+    <ul>
+     <li><a href="{{ url_for('index') }}" class="active">Home</a></li>
+
+
+    </ul>
+</nav>
+
+<section class="predict-section">
+
+    <div class="predict-card">
+
+        <h2>📊 Match Score Prediction</h2>
+
+        
+        {% if prediction %}
+        <h3 style="color: blue; text-align:center; margin: 20px">Predicted Score is around:{{prediction}}</h3>
+        
+        {% endif %}
+
+        <form method="post" action="/predict">
+
+            <!-- Batting Team -->
+            <div class="form-group">
+                
+                <label>Batting Team</label>
+                <select class="team-select" name="bat_team" required>
+                   
+                    <option>Kolkata Knight Riders</option>
+                    <option>Chennai Super Kings</option>
+                    <option>Rajasthan Royals</option>
+                    <option>Mumbai Indians</option>
+                    <option>Kings XI Punjab</option>
+                    <option>Royal Challengers Bangalore</option>
+                    <option>Delhi Daredevils</option>
+                    <option>Sunrisers Hyderabad</option>
+                    
+                    
+                </select>
+            </div>
+
+            <!-- Bowling Team -->
+            <div class="form-group">
+                <label>Bowling Team</label>
+                <select class="team-select" name="bowl_team" required>
+                    
+                    <option>Kolkata Knight Riders</option>
+                    <option>Chennai Super Kings</option>
+                    <option>Rajasthan Royals</option>
+                    <option>Mumbai Indians</option>
+                    <option>Kings XI Punjab</option>
+                    <option>Royal Challengers Bangalore</option>
+                    <option>Delhi Daredevils</option>
+                    <option>Sunrisers Hyderabad</option>
+        
+                </select>
+            </div>
+
+            <!-- Numeric Inputs -->
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Current Runs</label>
+                    <input type="number" name="runs" min="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Wickets Fallen</label>
+                    <input type="number" name="wickets" min="0" max="10" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Overs Completed</label>
+                    <input type="number" name="overs" step="0.1" min="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Runs in Last 5 Overs</label>
+                    <input type="number" name="runs_last_5"  required>
+                </div>
+
+                <div class="form-group">
+                    <label>Wickets in Last 5 Overs</label>
+                    <input type="number"name="wickets_last_5" min="0" max="10" required>
+                </div>
+
+            </div>
+
+            <button type="submit" class="predict-btn">Predict Score</button>
+
+        </form>
+
+
+        <!-- Back Button -->
+        <div class="back-home">
+            <a href="{{ url_for('index') }}" class="active">⬅ Back to Home</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Scripts for searchable dropdown -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+<script>
+    $('.team-select').select2({
+        placeholder: "Select Team",
+        allowClear: true,
+        width: '100%'
+    });
+</script>
+
+</body>
+</html>
