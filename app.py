@@ -205,7 +205,7 @@ def predict():
 
 
 # create main function 
-if __name__=='__main__':
-    app.run(debug=True,port=4007)  #different ports for different projects
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)#different ports for different projects
     
 
