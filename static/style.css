@@ -66,8 +66,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-
-    background: url("../images/image(2).webp") no-repeat center center/cover;
+    background: url("../static/images/image(2).webp") no-repeat center center/cover;
     padding: 20px;
 }
 
