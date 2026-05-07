@@ -180,26 +180,109 @@ body {
 
 /* ================= PREDICT ================= */
 
+/* ================= PREDICT PAGE ================= */
+
 .predict-section {
     min-height: 100vh;
-    padding: 100px 20px;
+    padding: 120px 20px;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background:
+    linear-gradient(rgba(15,23,42,0.75),
+    rgba(15,23,42,0.75)),
+    url("../static/images/image(2).webp");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .predict-card {
     width: 100%;
-    max-width: 800px;
-    padding: 30px;
-    border-radius: 15px;
-    background: rgba(255,255,255,0.05);
+    max-width: 850px;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
 .form-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #ffcc00;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+
+    border: none;
+    border-radius: 10px;
+
+    outline: none;
+
+    background: rgba(255,255,255,0.1);
+    color: white;
+
+    font-size: 15px;
+}
+
+.predict-btn {
+    width: 100%;
+    padding: 14px;
+
+    border: none;
+    border-radius: 50px;
+
+    background: linear-gradient(45deg,#ff512f,#dd2476);
+
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+
+    margin-top: 20px;
+}
+
+.predict-btn:hover {
+    transform: scale(1.03);
+}
+
+.result-box {
+    margin-top: 25px;
+    padding: 18px;
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.08);
+
+    text-align: center;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    color: #ffcc00;
 }
 
 /* ================= MOBILE RESPONSIVE ================= */
@@ -247,4 +330,72 @@ body {
     .feature-card {
         width: 100%;
     }
+}
+
+/* ================= SELECT2 STYLING ================= */
+
+.select2-container--default .select2-selection--single {
+    height: 48px !important;
+    border-radius: 10px !important;
+
+    border: none !important;
+
+    background: rgba(255,255,255,0.12) !important;
+
+    color: white !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    padding-left: 10px;
+}
+
+/* Selected text */
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: white !important;
+    line-height: 48px !important;
+    font-size: 15px;
+}
+
+/* Dropdown arrow */
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 48px !important;
+}
+
+/* Dropdown box */
+.select2-dropdown {
+    background: #1e293b !important;
+    border: none !important;
+    border-radius: 10px !important;
+
+    overflow: hidden;
+}
+
+/* Search box */
+.select2-search__field {
+    background: rgba(255,255,255,0.08) !important;
+    color: white !important;
+
+    border: none !important;
+    outline: none !important;
+
+    padding: 10px !important;
+}
+
+/* Options */
+.select2-results__option {
+    padding: 12px !important;
+    color: white !important;
+    background: #1e293b !important;
+}
+
+/* Hover option */
+.select2-results__option--highlighted {
+    background: linear-gradient(45deg,#ff512f,#dd2476) !important;
+    color: white !important;
+}
+
+/* Placeholder */
+.select2-container .select2-selection--single .select2-selection__placeholder {
+    color: #ddd !important;
 }
